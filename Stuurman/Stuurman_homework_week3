@@ -1,0 +1,93 @@
+## Exercise 3.1
+word_1 = 'unique'
+word_2 = 'diversity'
+
+combination = word_1[0:3] + word_2[2:]
+
+print(combination)
+
+## Exercise 3.2
+first = 'vladimir'
+last = 'nabokov'
+
+full_name = last[0].upper() + last[1:]
+full_name += ', '
+full_name += first[0].upper() + first[1:]
+
+print(full_name)
+
+initials = first[0] + last[0]
+initials = initials.upper() 
+
+print(initials)
+
+## Exercice 3.3
+name = 'Sjors Stuurman'
+name_without_space = name.replace(' ', '' )
+print(len(name_without_space))
+
+## Exercise 3.4
+url = 'https://www.universiteitleiden.nl'
+tld = url[url.rindex('.')+1 :]
+print(tld)
+
+## Exercise 3.5
+filename = 'README.txt'
+filename_without_ext = filename[ 0 : filename.rindex('.') ]
+print(filename_without_ext) 
+
+## Exercise 4.1
+nr_weeks = 12
+for week_number in range( 1, nr_weeks+1):
+    print( f"Week {week_number}\n" )
+
+## Exercise 4.2
+hour = 7
+
+print( f"It is now {hour} o'clock" )
+
+if 6 <= hour and hour < 12:
+    print("Good morning!")
+elif 12 <= hour and hour < 17:
+    print("Good afternoon!")
+elif 17 <= hour and hour < 23:
+    print("Good evening!")
+else:
+    print("Good night!")
+
+## Exercise 4.3
+year = int( input( f"Please enter a year: ") )
+
+if year >= 1500 and year < 1600:
+    century = "sixteenth century"
+elif year >= 1600 and year < 1700:
+    century = "seventeenth century"
+elif year >= 1700 and year < 1800:
+    century = "eighteenth century"
+elif year >= 1800 and year < 1900:
+    century = "nineteenth century"
+elif year >= 1900 and year < 2000:
+    century = "twentienth century"
+else:
+    century = "twenty-first century"
+  
+print( f"The year {year} is in the {century}." )
+
+## Exercise 4.4
+
+from random import randint
+
+max_number = 50
+number_to_guess = randint(0,max_number)
+
+guess = int( input( f"Guess a number in between 1 and {max_number}: ") )
+
+while guess != number_to_guess:
+
+    if guess > number_to_guess:
+        print("Lower!")
+    elif guess < number_to_guess:
+        print("Higher!")
+    guess = int( input("Guess again ... \n") )
+
+print( f"The correct number is indeed {number_to_guess}." )
